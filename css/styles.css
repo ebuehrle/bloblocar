@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #000149;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.overflow {
+    overflow: auto;
+    display: flex;
+}
+
+.center {
+    padding: 10px;
+    margin: auto;
+    color: black; /* Blockly UI font color */
+    display: flex;
+}
+
+main {
+    max-width: 50em;
+    margin: 5em auto;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+
+h1, h2, footer, .hero .hint {
+    margin: 1em;
+    text-align: center;
+}
+
+h1, h2, footer, a, .task {
+    font-family: 'DotGothic16', sans-serif;
+    color: mediumaquamarine;
+}
+
+p {
+    margin: 1em;
+}
+
+img, video {
+    display: block;
+    margin: 3em auto;
+    max-width: 100%;
+}
+
+#metacar {
+    margin-right: 10px;
+}
+
+#blockly {
+    height: 600px;
+    width: 1400px;
+}
+
+.execution {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    bottom: 30px;
+    left: 15px;
+}
+
+.execution button {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+
+    margin: 5px;
+    padding: 5px;
+    
+    border: none;
+    border-radius: 200px;
+    background-color: mediumspringgreen;
+
+    cursor: pointer;
+    box-shadow: 2px 2px 20px #444444;
+}
+
+.execution button:hover {
+    box-shadow: 3px 3px 30px #222222;
+}
+
+.execution .run {
+    display: block;
+}
+
+.execution .stop {
+    display: none;
+}
+
+.execution.running .run {
+    display: none;
+}
+
+.execution.running .stop {
+    display: block;
+}

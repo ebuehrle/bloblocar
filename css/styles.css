@@ -55,6 +55,10 @@ img, video {
     max-width: 100%;
 }
 
+.spoiler-spacer {
+    height: 200vh;
+}
+
 #metacar {
     margin-right: 10px;
 }

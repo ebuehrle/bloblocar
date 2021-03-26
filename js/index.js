@@ -72,10 +72,10 @@ document.querySelector('.reset').addEventListener('click', () => {
 });
 
 const btnForward = document.querySelector('.forward');
-document.querySelector('.forward').addEventListener('mousedown', () => {
+btnForward.addEventListener('mousedown', () => {
     env.level.agent.motion.moveForward();
 });
-document.querySelector('.forward').addEventListener('touchstart', () => {
+btnForward.addEventListener('touchstart', () => {
     env.level.agent.motion.moveForward();
 });
 btnForward.addEventListener('mouseup', () => {

@@ -2,12 +2,14 @@ const env = new metacar.env('metacar', metacar.level.level3);
 env.setAgentLidar({pts: 5, width: 4, height: 5, pos: -1.5});
 env.load();
 
+/* Stop window from scrolling */
 window.addEventListener('keydown', e => {
     if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
         e.preventDefault();
     }
 });
 
+/* Set up Blockly workspace */
 let workspace = Blockly.inject('blockly', {
     toolbox: document.getElementById('toolbox')
 });
@@ -26,8 +28,8 @@ workspace.addChangeListener(() => {
     }
 })();
 
+/* Code runner */
 let codeInterpreter;
-
 document.querySelector('.run').addEventListener('click', () => {
     Blockly.JavaScript.addReservedWords('code', 'env');
     Blockly.JavaScript.INFINITE_LOOP_TRAP = 'sleep(1);\n';
@@ -57,12 +59,39 @@ document.querySelector('.run').addEventListener('click', () => {
     });
 });
 
+/* Set up control buttons */
 document.querySelector('.stop').addEventListener('click', () => {
     codeInterpreter.paused_ = true;
     codeInterpreter = null;
-    env.level.agent.core.v = 0
+    env.level.agent.core.v = 0;
 });
 
 document.querySelector('.reset').addEventListener('click', () => {
     env.reset();
+});
+
+const btnForward = document.querySelector('.forward');
+document.querySelector('.forward').addEventListener('mousedown', () => {
+    env.level.agent.motion.moveForward();
+});
+btnForward.addEventListener('mouseup', () => {
+    env.level.agent.core.v = 0;
+});
+
+const btnBackward = document.querySelector('.backward');
+btnBackward.addEventListener('mousedown', () => {
+    env.level.agent.motion.moveBackward();
+});
+btnBackward.addEventListener('mouseup', () => {
+    env.leven.agent.core.v = 0;
+});
+
+const btnLeft = document.querySelector('.left');
+btnLeft.addEventListener('click', () => {
+    env.level.agent.motion.turnLeft();
+});
+
+const btnRight = document.querySelector('.right');
+btnRight.addEventListener('click', () => {
+    env.level.agent.motion.turnRight();
 });

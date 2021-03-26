@@ -92,6 +92,10 @@ img, video {
     box-shadow: 2px 2px 20px #444444;
 }
 
+.execution .spacer-horizontal {
+    width: 40px;
+}
+
 .execution button:hover {
     box-shadow: 3px 3px 30px #222222;
 }

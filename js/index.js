@@ -63,6 +63,7 @@ document.querySelector('.run').addEventListener('click', () => {
 document.querySelector('.stop').addEventListener('click', () => {
     codeInterpreter.paused_ = true;
     codeInterpreter = null;
+    document.querySelector('.execution').classList.remove('running');
     env.level.agent.core.v = 0;
 });
 

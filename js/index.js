@@ -75,7 +75,13 @@ const btnForward = document.querySelector('.forward');
 document.querySelector('.forward').addEventListener('mousedown', () => {
     env.level.agent.motion.moveForward();
 });
+document.querySelector('.forward').addEventListener('touchstart', () => {
+    env.level.agent.motion.moveForward();
+});
 btnForward.addEventListener('mouseup', () => {
+    env.level.agent.core.v = 0;
+});
+btnForward.addEventListener('touchend', () => {
     env.level.agent.core.v = 0;
 });
 
@@ -83,7 +89,13 @@ const btnBackward = document.querySelector('.backward');
 btnBackward.addEventListener('mousedown', () => {
     env.level.agent.motion.moveBackward();
 });
+btnBackward.addEventListener('touchstart', () => {
+    env.level.agent.motion.moveBackward();
+});
 btnBackward.addEventListener('mouseup', () => {
+    env.leven.agent.core.v = 0;
+});
+btnBackward.addEventListener('touchend', () => {
     env.leven.agent.core.v = 0;
 });
 

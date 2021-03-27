@@ -53,17 +53,24 @@ document.querySelector('.run').addEventListener('click', () => {
             } catch (e) {
                 alert(e);
             }
-            document.querySelector('.execution').classList.remove('running');
+            stopProgram(); // execution terminated or aborted
         })();
         resolve();
     });
 });
 
-/* Set up control buttons */
-document.querySelector('.stop').addEventListener('click', () => {
-    codeInterpreter.paused_ = true;
+function stopProgram() {
+    if (codeInterpreter) {
+        // execution aborted
+        codeInterpreter.paused_ = true;
+    }
     codeInterpreter = null;
     document.querySelector('.execution').classList.remove('running');
+}
+
+/* Set up controls */
+document.querySelector('.stop').addEventListener('click', () => {
+    stopProgram();
     env.level.agent.core.v = 0;
 });
 

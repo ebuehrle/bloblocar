@@ -40,7 +40,7 @@ h1, h2, footer, .hero .hint {
     text-align: center;
 }
 
-h1, h2, footer, a, .task {
+h1, h2, footer, a, .task, .spoiler .spoiler--title {
     font-family: 'DotGothic16', monospace;
     color: mediumaquamarine;
 }
@@ -53,6 +53,38 @@ img, video {
     display: block;
     margin: 3em auto;
     max-width: 100%;
+}
+
+.spoiler {
+    cursor: pointer;
+    display: block;
+    background: none;
+    padding: 1em;
+
+    border-left: 1px solid mediumaquamarine;
+    border-right: 1px solid mediumaquamarine;
+    border-top: none;
+    border-bottom: none;
+
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.spoiler .spoiler--title {
+    margin-bottom: 1em;
+}
+
+.spoiler .spoiler--content {
+    display: none;
+}
+
+.spoiler.open .spoiler--content {
+    display: block;
+}
+
+.spoiler .spoiler--content img,
+.spoiler .spoiler--content video {
+    margin: 1em auto;
 }
 
 .spoiler-spacer {

@@ -100,18 +100,21 @@ img, video {
     width: 1400px;
 }
 
-.execution {
+.floating-toolbar {
     display: flex;
     position: relative;
-    z-index: 1;
+    z-index: 70; /* Blockly toolbox seems to have z-index 69 */
     bottom: 30px;
     left: 15px;
 }
 
-.execution button {
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
+.floating-toolbar--button {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
 
     margin: 5px;
     padding: 5px;
@@ -124,16 +127,16 @@ img, video {
     box-shadow: 2px 2px 20px #444444;
 }
 
-.execution .spacer-horizontal {
-    width: 40px;
-}
-
-.execution button:hover {
+.floating-toolbar--button:hover {
     box-shadow: 3px 3px 30px #222222;
 }
 
+.floating-toolbar--spacer {
+    width: 40px;
+}
+
 .execution .run {
-    display: block;
+    display: flex;
 }
 
 .execution .stop {
@@ -145,5 +148,5 @@ img, video {
 }
 
 .execution.running .stop {
-    display: block;
+    display: flex;
 }

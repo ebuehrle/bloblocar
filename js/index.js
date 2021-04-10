@@ -16,17 +16,55 @@ let workspace = Blockly.inject('blockly', {
 
 workspace.addChangeListener(() => {
     const xml = Blockly.Xml.workspaceToDom(workspace);
+
     const text = Blockly.Xml.domToText(xml);
     localStorage.setItem('workspaceContents', text);
+
+    const prettyText = Blockly.Xml.domToPrettyText(xml);
+    const file = new Blob([prettyText]);
+    document.querySelector('.save').href = URL.createObjectURL(file);
+    document.querySelector('.save').download = 'code.blo';
 });
 
-(function loadWorkspace() {
+(function loadWorkspace(xmlText) {
+    if (xmlText) {
+        return setWorkspaceContents(xmlText);
+    }
+    
     if ('workspaceContents' in localStorage) {
         const text = localStorage.getItem('workspaceContents');
-        const xml = Blockly.Xml.textToDom(text);
-        Blockly.Xml.domToWorkspace(xml, workspace);
+        return setWorkspaceContents(text);
     }
 })();
+
+function setWorkspaceContents(xmlText) {
+    const xml = Blockly.Xml.textToDom(xmlText);
+    workspace.clear();
+    Blockly.Xml.domToWorkspace(xml, workspace);
+}
+
+document.querySelector('.undo').addEventListener('click', () => 
+    workspace.undo(false)
+);
+
+document.querySelector('.redo').addEventListener('click', () => 
+    workspace.undo(true)
+);
+
+document.querySelector('.open').addEventListener('change', e => {
+    const file = e.target.files[0];
+    if (!file) {
+        return;
+    }
+    e.target.value = null;
+
+    const reader = new FileReader();
+    reader.onload = e => {
+        const xmlText = e.target.result;
+        setWorkspaceContents(xmlText);
+    };
+    reader.readAsText(file);
+});
 
 /* Code runner */
 let codeInterpreter;
@@ -53,7 +91,7 @@ document.querySelector('.run').addEventListener('click', () => {
             } catch (e) {
                 alert(e);
             }
-            stopProgram(); // execution terminated or aborted
+            stopProgram(); // execution terminated or stopped
         })();
         resolve();
     });
@@ -61,7 +99,6 @@ document.querySelector('.run').addEventListener('click', () => {
 
 function stopProgram() {
     if (codeInterpreter) {
-        // execution aborted
         codeInterpreter.paused_ = true;
     }
     codeInterpreter = null;

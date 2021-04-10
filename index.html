@@ -5,6 +5,7 @@
         <title>Bloblocar</title>
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css" />
         <script defer src="js/spoilers.js"></script>
         <style>
@@ -21,21 +22,30 @@
               <div class="center">
                 <div>
                     <div id="metacar"></div>
-                    <div class="execution">
-                        <button class="run">▶</button>
-                        <button class="stop">■</button>
-                        <button class="reset">↺</button>
+                    <div class="floating-toolbar">
+                        <div class="execution">
+                          <button class="floating-toolbar--button run"><span class="material-icons-round">play_arrow</span></button>
+                          <button class="floating-toolbar--button stop"><span class="material-icons-round">stop</span></button>
+                        </div>
+                        <button class="floating-toolbar--button reset"><span class="material-icons-round">replay</span></button>
 
-                        <div class="spacer-horizontal"></div>
+                        <div class="floating-toolbar--spacer"></div>
                         
-                        <button class="forward">⬆</button>
-                        <button class="backward">⬇</button>
-                        <button class="left">⬅</button>
-                        <button class="right">⮕</button>
+                        <button class="floating-toolbar--button forward"><span class="material-icons-round">arrow_upward</span></button>
+                        <button class="floating-toolbar--button backward"><span class="material-icons-round">arrow_downward</span></button>
+                        <button class="floating-toolbar--button left"><span class="material-icons-round">arrow_back</span></button>
+                        <button class="floating-toolbar--button right"><span class="material-icons-round">arrow_forward</span></button>
                     </div>
                 </div>
                 <div>
                     <div id="blockly"></div>
+                    <div class="floating-toolbar">
+                      <button class="floating-toolbar--button undo"><span class="material-icons-round">undo</span></button>
+                      <button class="floating-toolbar--button redo"><span class="material-icons-round">redo</span></button>
+                      <div class="floating-toolbar--spacer"></div>
+                      <a class="floating-toolbar--button save" href="#"><span class="material-icons-round">download</span></a>
+                      <div class="floating-toolbar--button"><span class="material-icons-round">upload</span><input class="open" type="file" /></div>
+                    </div>
                 </div>
               </div>
             </div>

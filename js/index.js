@@ -11,7 +11,7 @@ window.addEventListener('keydown', e => {
 
 /* Set up Blockly workspace */
 let workspace = Blockly.inject('blockly', {
-    toolbox: document.getElementById('toolbox')
+    toolbox: toolboxDefinition
 });
 
 workspace.addChangeListener(() => {

@@ -1,0 +1,53 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="controls_whileUntil" id="DH9Wtd~^38tY?P6$b(u|" x="68" y="81">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <block type="logic_boolean" id="lE--AV-ymp9X$t1+U13K">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="vLn^A(lBrF!Qiv4ub417">
+        <value name="IF0">
+          <block type="lidar" id="n[BW~Eb=Hb4VWNsJ@r8n">
+            <field name="obstacle_type">terrain</field>
+            <field name="front_distance">3m</field>
+            <field name="lateral_distance">0m</field>
+            <field name="lateral_direction">left</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="stop" id="O@a,WL;Le~a9zBS:PSx:"></block>
+        </statement>
+        <next>
+          <block type="controls_if" id="/LgW}jV]+J]SZ4u-J-!K">
+            <value name="IF0">
+              <block type="logic_operation" id="}dY3orK@bRrHrq({Tbs-">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="lidar" id="VhYLxS$t|:IuwSQ,5)6/">
+                    <field name="obstacle_type">terrain</field>
+                    <field name="front_distance">4m</field>
+                    <field name="lateral_distance">0m</field>
+                    <field name="lateral_direction">left</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="lidar" id="_gX8pHSg8A7-E)4CQ@^J">
+                    <field name="obstacle_type">road</field>
+                    <field name="front_distance">2m</field>
+                    <field name="lateral_distance">2m</field>
+                    <field name="lateral_direction">right</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="stop" id="|Tc[;t/_X!1-dv2~%hEU"></block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

@@ -6,7 +6,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css" />
-        <script defer src="js/spoilers.js"></script>
     </head>
     <body>
         <main>
@@ -36,23 +35,23 @@
                 <p>Wie du merkst, ist diese Logik nicht ganz korrekt, denn das Auto hält jetzt bei Linkskurven zu früh an. Das liegt daran, dass das Straßenende allein noch nicht ausschlaggebend für eine Rechtskurve ist. Wir müssen noch überprüfen, ob die Straße auch nach rechts weitergeht.</p>
                 <p><span class="task">Aufgabe. </span>Verwende eine <em>und</em>-Verknüfung aus der Kategorie <em>Logik</em>, um Rechtskurven korrekt zu erkennen.</p>
                 
-                <button class="spoiler">
+                <div class="spoiler">
                     <h3 class="spoiler--title">Lösung</h3>
                     <div class="spoiler--content">
-                        <img src="res/turns-stop.png"/>
+                        <div id="t3-sln-turns-stop" class="spoiler-blockly" data-src="res/turns-stop.blo"></div>
                     </div>
-                </button>
+                </div>
 
                 <p>Wenn du jetzt Gas gibst, sollte das Auto von selbst vor jeder Kurve anhalten.</p>
                 <p><span class="task">Aufgabe. </span>Drehe ein paar Runden und überprüfe, ob das Programm richtig funktioniert.</p>
                 <p><span class="task">⭐️ Aufgabe. </span>Erweitere das Programm so, dass das Auto bei Kurven selbstständig abbiegt.</p>
 
-                <button class="spoiler">
+                <div class="spoiler">
                     <h3 class="spoiler--title">Lösung</h3>
                     <div class="spoiler--content">
-                        <img src="res/turns-turn.png"/>
+                        <div id="t3-sln-turns-turn" class="spoiler-blockly" data-src="res/turns-turn.blo"></div>
                     </div>
-                </button>
+                </div>
 
                 <p>Jetzt sollte es ausreichen, die ⬆-Taste deiner Tastatur gedrückt zu halten. Solange du nicht mit anderen Autos kollidierst, sollte dein Auto automatisch abbiegen.</p>
 
@@ -62,12 +61,12 @@
                 <p><span class="task">Aufgabe. </span>Überprüfe, ob dein Programm richtig funktioniert.</p>
                 <p><span class="task">⭐️ Aufgabe. </span>Erweitere den Algorithmus so, dass das Auto von selbst losfährt.</p>
                 
-                <button class="spoiler">
+                <div class="spoiler">
                     <h3 class="spoiler--title">Lösung</h3>
                     <div class="spoiler--content">
-                        <img src="res/simple-bot.png"/>
+                        <div id="t3-sln-simple-bot" class="spoiler-blockly" data-src="res/simple-bot.blo"></div>
                     </div>
-                </button>
+                </div>
                 
                 <p><span class="task">Aufgabe. </span>Lass dein Auto ein paar Runden drehen.</p>
                 <p><span class="task">Aufgabe. </span>Lüfte dein Zimmer und schaue dann nach, ob das Auto noch fährt.</p>
@@ -75,5 +74,12 @@
                 <p>👩‍💻🎉🥳🎊 Das Auto fährt jetzt völlig von selbst! 👩‍💻🎉🥳🎊</p>
             </article>
         </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/blockly_compressed.min.js" integrity="sha512-tXA+4Hl30iYf9v/q+v1NdX7cGUrl0BvreZm87eGdwjhKBYMT0JpQDZMCT92JVyxw+U3WZCXwZaaBSi6l8YybzQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/blocks_compressed.min.js" integrity="sha512-2EDgchO+DLca8kTvZv5NGY57nB+fH3DelW4qIKEW94cUy+UpgHNdpO6GCSxUtGYuG6ny7f2fssqCIrlN3WrHvw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/msg/de.min.js" integrity="sha512-1leqX+0sKS+Ya6twp1r9c2P6FtnYQtMRRm7LaBlO8Xwk0XM9QZSfJKf9dxw4XofiuiSHJ11xOK78zlrvJF0zcw==" crossorigin="anonymous"></script>
+        <script src="blockly/metacar-toolbox.de.js"></script>
+        <script src="blockly/metacar-blocks.de.js"></script>
+        <script src="js/spoilers.js"></script>
     </body>
 </html>

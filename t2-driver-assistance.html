@@ -6,7 +6,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css" />
-        <script defer src="js/spoilers.js"></script>
     </head>
     <body>
         <main>
@@ -42,16 +41,23 @@
                 <p><span class="task">Aufgabe. </span>Ziehe die Fallunterscheidung mit ihren zwei verknüpften Blöcken in die Lücke rechts neben <em>mache</em>.</p>
                 <p><span class="task">Aufgabe. </span>Ziehe einen <em>wahr</em>-Block aus der Kategorie <em>Logik</em> in die Lücke rechts neben <em>wiederhole solange</em>. Dadurch läuft das Programm in Endlosschleife.</p>
 
-                <button class="spoiler">
+                <div class="spoiler">
                     <h3 class="spoiler--title">Lösung</h3>
                     <div class="spoiler--content">
-                        <img src="res/terrain-stop.png"/>
+                        <div id="t2-sln-terrain-stop" class="spoiler-blockly" data-src="res/terrain-stop.blo"></div>
                     </div>
-                </button>
-
+                </div>
+                
                 <p>Wenn du jetzt das Programm ausführst, kannst du das Auto mit den Pfeiltasten bewegen. Am Ende der Straße hält es automatisch an.</p>
                 <p>Mit den Blöcken, die wir gerade kennengelernt haben, lässt sich das Auto so programmieren, dass es völlig von selbst um den Kurs fährt. Das nehmen wir im nächsten Abschnitt in Angriff!</p>
             </article>
         </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/blockly_compressed.min.js" integrity="sha512-tXA+4Hl30iYf9v/q+v1NdX7cGUrl0BvreZm87eGdwjhKBYMT0JpQDZMCT92JVyxw+U3WZCXwZaaBSi6l8YybzQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/blocks_compressed.min.js" integrity="sha512-2EDgchO+DLca8kTvZv5NGY57nB+fH3DelW4qIKEW94cUy+UpgHNdpO6GCSxUtGYuG6ny7f2fssqCIrlN3WrHvw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/msg/de.min.js" integrity="sha512-1leqX+0sKS+Ya6twp1r9c2P6FtnYQtMRRm7LaBlO8Xwk0XM9QZSfJKf9dxw4XofiuiSHJ11xOK78zlrvJF0zcw==" crossorigin="anonymous"></script>
+        <script src="blockly/metacar-toolbox.de.js"></script>
+        <script src="blockly/metacar-blocks.de.js"></script>
+        <script src="js/spoilers.js"></script>
     </body>
 </html>

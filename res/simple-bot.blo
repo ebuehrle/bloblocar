@@ -1,0 +1,87 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="controls_whileUntil" id="DH9Wtd~^38tY?P6$b(u|" x="68" y="81">
+    <field name="MODE">WHILE</field>
+    <value name="BOOL">
+      <block type="logic_boolean" id="lE--AV-ymp9X$t1+U13K">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="vLn^A(lBrF!Qiv4ub417">
+        <value name="IF0">
+          <block type="lidar" id="n[BW~Eb=Hb4VWNsJ@r8n">
+            <field name="obstacle_type">terrain</field>
+            <field name="front_distance">3m</field>
+            <field name="lateral_distance">0m</field>
+            <field name="lateral_direction">left</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="turn" id="xPg[s]eV1Lw(K=GIa=x_">
+            <field name="turn_direction">left</field>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="/LgW}jV]+J]SZ4u-J-!K">
+            <value name="IF0">
+              <block type="logic_operation" id="}dY3orK@bRrHrq({Tbs-">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="lidar" id="VhYLxS$t|:IuwSQ,5)6/">
+                    <field name="obstacle_type">terrain</field>
+                    <field name="front_distance">4m</field>
+                    <field name="lateral_distance">0m</field>
+                    <field name="lateral_direction">left</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="lidar" id="_gX8pHSg8A7-E)4CQ@^J">
+                    <field name="obstacle_type">road</field>
+                    <field name="front_distance">2m</field>
+                    <field name="lateral_distance">2m</field>
+                    <field name="lateral_direction">right</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="turn" id="1kwc?KpTgfY2i2(BwKr,">
+                <field name="turn_direction">right</field>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="JCo6-7NUn3@j-~Cbq{I1">
+                <value name="IF0">
+                  <block type="lidar" id="Rj0t3):sI#hfs_MuzCUU">
+                    <field name="obstacle_type">car</field>
+                    <field name="front_distance">4m</field>
+                    <field name="lateral_distance">0m</field>
+                    <field name="lateral_direction">left</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="stop" id="vM(g78%-Rto;G~+CR8P~"></block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="@XE=1%cyUY|]yE8Q-)!(">
+                    <value name="IF0">
+                      <block type="lidar" id="n)c=S0LuPgULXdkWf1KN">
+                        <field name="obstacle_type">road</field>
+                        <field name="front_distance">4m</field>
+                        <field name="lateral_distance">0m</field>
+                        <field name="lateral_direction">left</field>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="forward" id="-p2Ri.}.,R9Ho7BT-sQL"></block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

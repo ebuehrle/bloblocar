@@ -6,7 +6,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css" />
-        <script defer src="js/spoilers.js"></script>
     </head>
     <body>
         <main>
@@ -16,15 +15,21 @@
                 <p><span class="task">⭐️⭐️ Aufgabe. </span>Sorge dafür, dass das Auto nicht einfach nur bremst, wenn es ein anderes Fahrzeug vor sich hat, sondern überholt.</p>
                 <p>Hier ist ein Video, das den fertigen Algorithmus in Aktion zeigt:</p>
                 <video controls>
-                    <source src="res/complex-bot.mov"/>
+                    <source src="res/overtake-bot.mov"/>
                 </video>
                 <p>Falls du nicht weiterkommst, findest du weiter unten auf dieser Seite den Algorithmus, mit dem das Video erstellt wurde.</p>
                 <div class="spoiler-spacer"></div>
                 <p>Wieviele deiner Lösungsideen hast du ausprobiert?</p>
                 <div class="spoiler-spacer"></div>
-                <img src="res/complex-bot-drive.png"/>
-                <img src="res/complex-bot-overtake.png"/>
+                <div id="t3-sln-overtake-bot" class="spoiler-blockly" style="height: 600px" data-src="res/overtake-bot.blo"></div>
             </article>
         </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/blockly_compressed.min.js" integrity="sha512-tXA+4Hl30iYf9v/q+v1NdX7cGUrl0BvreZm87eGdwjhKBYMT0JpQDZMCT92JVyxw+U3WZCXwZaaBSi6l8YybzQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/blocks_compressed.min.js" integrity="sha512-2EDgchO+DLca8kTvZv5NGY57nB+fH3DelW4qIKEW94cUy+UpgHNdpO6GCSxUtGYuG6ny7f2fssqCIrlN3WrHvw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/4.20201217.0/msg/de.min.js" integrity="sha512-1leqX+0sKS+Ya6twp1r9c2P6FtnYQtMRRm7LaBlO8Xwk0XM9QZSfJKf9dxw4XofiuiSHJ11xOK78zlrvJF0zcw==" crossorigin="anonymous"></script>
+        <script src="blockly/metacar-toolbox.de.js"></script>
+        <script src="blockly/metacar-blocks.de.js"></script>
+        <script src="js/spoilers.js"></script>
     </body>
 </html>

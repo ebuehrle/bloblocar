@@ -55,22 +55,26 @@ img, video {
     max-width: 100%;
 }
 
+#metacar {
+    margin-right: 10px;
+}
+
+.blockly {
+    height: 600px;
+    width: 1400px;
+}
+
 .spoiler {
     cursor: pointer;
-    display: block;
-    background: none;
     padding: 1em;
 
     border-left: 1px solid mediumaquamarine;
     border-right: 1px solid mediumaquamarine;
-    border-top: none;
-    border-bottom: none;
 
     width: 100%;
-    transition: all 0.5s ease;
 }
 
-.spoiler .spoiler--title {
+.spoiler--title {
     margin-bottom: 1em;
 }
 
@@ -82,22 +86,18 @@ img, video {
     display: block;
 }
 
-.spoiler .spoiler--content img,
-.spoiler .spoiler--content video {
+.spoiler--content img,
+.spoiler--content video {
     margin: 1em auto;
+}
+
+.spoiler-blockly {
+    height: 300px;
+    width: 100%;
 }
 
 .spoiler-spacer {
     height: 200vh;
-}
-
-#metacar {
-    margin-right: 10px;
-}
-
-#blockly {
-    height: 600px;
-    width: 1400px;
 }
 
 .floating-toolbar {

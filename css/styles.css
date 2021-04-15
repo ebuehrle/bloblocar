@@ -40,6 +40,31 @@ h1, h2, footer, .hero .hint {
     text-align: center;
 }
 
+.md-48 {
+    font-size: 48px;
+}
+
+@keyframes bounce-animation {
+    0%   { top: 0px; }
+    10%  { top: 10px; }
+    20%  { top: 0px; }
+    30%  { top: 10px; }
+    75%  { top: 0px; }
+    100% { top: 0px; }
+}
+
+.bounce {
+    position: relative;
+    animation-name: bounce-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.bounce:visited {
+    animation: none !important;
+}
+
 h1, h2, footer, a, .task, .spoiler .spoiler--title {
     font-family: 'DotGothic16', monospace;
     color: mediumaquamarine;

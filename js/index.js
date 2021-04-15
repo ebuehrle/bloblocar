@@ -9,6 +9,11 @@ window.addEventListener('keydown', e => {
     }
 });
 
+/* Stop scroll hint animation when clicked */
+document.querySelectorAll('.bounce').forEach(e => {
+    e.addEventListener('click', () => e.classList.remove('bounce'));
+});
+
 /* Set up Blockly workspace */
 let workspace = Blockly.inject('blockly', {
     toolbox: toolboxDefinition

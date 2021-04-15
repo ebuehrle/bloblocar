@@ -13,33 +13,33 @@
                 <h1>Ein Assistenzsystem</h1>
                 <p>Wir schreiben jetzt ein Programm, das das Auto automatisch anhalten lässt, wenn es kurz davor ist, von der Straße abzukommen. Dazu werden wir die Sensoren des Autos verwenden, sowie Blöcke aus der Kategorie <em>Logik</em>, die es dem Algorithmus ermöglichen, selbstständig Entscheidungen zu treffen. Viele aktuelle Autos besitzen übrigens solche oder ähnliche Funktionen, man bezeichnet sie als <em>Fahrerassistenzsysteme</em>.</p>
                 
-                <p><span class="task">Aufgabe. </span>Lösche alle Blöcke, um mit einer leeren Leinwand zu beginnen.</p>
+                <p><span class="task">Aufgabe 3.</span>Lösche alle Blöcke, um mit einer leeren Leinwand zu beginnen.</p>
 
                 <p>Die Grundidee ist sehr einfach: das rote Auto soll stoppen, falls es unmittelbar vor sich keine Straße mehr sieht. Das können wir fast genau so auch in Blockly ausdrücken.</p>
-                <p><span class="task">Aufgabe. </span>Öffne die Kategorie <em>Logik</em> und schaue dich darin um. Siehst du einen Block, der passen könnte?</p>
-                <p><span class="task">Aufgabe. </span>Ziehe einen <em>falls ... mache</em>-Block auf die Leinwand (solche Blöcke bezeichnet man auch als <em>Fallunterscheidung</em>).</p>
+                <p><span class="task">Aufgabe 3.</span>Öffne die Kategorie <em>Logik</em> und schaue dich darin um. Siehst du einen Block, der passen könnte?</p>
+                <p><span class="task">Aufgabe 3.</span>Ziehe einen <em>falls ... mache</em>-Block auf die Leinwand (solche Blöcke bezeichnet man auch als <em>Fallunterscheidung</em>).</p>
 
                 <p>Der <em>mache</em>-Teil ist einfach. Kannst du dir schon denken, was da hineingehört?</p>
-                <p><span class="task">Aufgabe. </span>Ziehe einen <em>stop</em>-Block aus der Kategorie <em>Bloblocar</em> in die Lücke.</p>
+                <p><span class="task">Aufgabe 3.</span>Ziehe einen <em>stop</em>-Block aus der Kategorie <em>Bloblocar</em> in die Lücke.</p>
 
                 <p>Für den <em>falls</em>-Teil brauchen wir einen neuen Block aus der <em>Bloblocar</em>-Kategorie, den du vielleicht auch schon entdeckt hast. Wir müssen nämlich die Sensoren des Autos abfragen, um zu überprüfen, ob das Auto noch auf der Straße ist.</p>
-                <p><span class="task">Aufgabe. </span>Ziehe einen Block, der mit <em>&bdquo;da ist ein Auto ... vor mir&rdquo;</em> beschriftet ist, auf die Leinwand.</p>
+                <p><span class="task">Aufgabe 3.</span>Ziehe einen Block, der mit <em>&bdquo;da ist ein Auto ... vor mir&rdquo;</em> beschriftet ist, auf die Leinwand.</p>
 
                 <p>Mit diesem Block kannst du die Sensoren abfragen. Du kannst einstellen, wo und auf welche Gegenstände das Auto achten soll.</p>
-                <p><span class="task">Aufgabe. </span>Welche verschiedenen Hindernisse können vom Sensor-Block erkannt werden?</p>
+                <p><span class="task">Aufgabe 3.</span>Welche verschiedenen Hindernisse können vom Sensor-Block erkannt werden?</p>
                 
                 <p>Das Auto soll stehen bleiben, wenn es direkt vor sich keine Straße mehr sieht.</p>
-                <p><span class="task">Aufgabe. </span>Welche Einstellungen müsste man dazu am Sensor-Block verändern?</p>
-                <p><span class="task">Aufgabe. </span>Verändere die Einstellungen so, dass auf dem Block steht: <br/><em>&bdquo;da ist etwas anderes 1m vor mir 0m links von mir&rdquo;</em></p>
-                <p><span class="task">Aufgabe. </span>Verbinde den Sensor-Block mit der Fallunterscheidung.</p>
+                <p><span class="task">Aufgabe 3.</span>Welche Einstellungen müsste man dazu am Sensor-Block verändern?</p>
+                <p><span class="task">Aufgabe 3.</span>Verändere die Einstellungen so, dass auf dem Block steht: <br/><em>&bdquo;da ist etwas anderes 1m vor mir 0m links von mir&rdquo;</em></p>
+                <p><span class="task">Aufgabe 3.</span>Verbinde den Sensor-Block mit der Fallunterscheidung.</p>
 
                 <p>Jetzt müssen wir nur noch eine Kleinigkeit hinzufügen. Wenn du nämlich das Programm startest, wirst du feststellen, dass es nur einmal kurz läuft und dann sofort zu Ende ist. Hmmm ... 🤔 </p>
 
                 <p>Naja, eigentlich logisch: das Programm besteht halt nur aus dieser einen Fallunterscheidung. Die führt der Computer eben aus und ist dann fertig. 🙈 Wir müssen ihm mitteilen, dass er das ganze <em>wiederholen</em> soll. Dazu eignen sich Blöcke aus der Kategorie <em>Schleifen</em> (so nennen Programmierer das). In unserem Fall soll das Programm sozusagen in Dauerschleife laufen. Keine Sorge, du kannst es dann bei Bedarf mit dem ■-Knopf unterbrechen.</p>
-                <p><span class="task">Aufgabe. </span>Schau dich in der Kategorie <em>Schleifen</em> um. Siehst du vielleicht einen passenden Block?</p>
-                <p><span class="task">Aufgabe. </span>Ziehe einen <em>wiederhole solange</em>-Block auf die Leinwand.</p>
-                <p><span class="task">Aufgabe. </span>Ziehe die Fallunterscheidung mit ihren zwei verknüpften Blöcken in die Lücke rechts neben <em>mache</em>.</p>
-                <p><span class="task">Aufgabe. </span>Ziehe einen <em>wahr</em>-Block aus der Kategorie <em>Logik</em> in die Lücke rechts neben <em>wiederhole solange</em>. Dadurch läuft das Programm in Endlosschleife.</p>
+                <p><span class="task">Aufgabe 3.</span>Schau dich in der Kategorie <em>Schleifen</em> um. Siehst du vielleicht einen passenden Block?</p>
+                <p><span class="task">Aufgabe 3.</span>Ziehe einen <em>wiederhole solange</em>-Block auf die Leinwand.</p>
+                <p><span class="task">Aufgabe 3.</span>Ziehe die Fallunterscheidung mit ihren zwei verknüpften Blöcken in die Lücke rechts neben <em>mache</em>.</p>
+                <p><span class="task">Aufgabe 3.</span>Ziehe einen <em>wahr</em>-Block aus der Kategorie <em>Logik</em> in die Lücke rechts neben <em>wiederhole solange</em>. Dadurch läuft das Programm in Endlosschleife.</p>
 
                 <div class="spoiler">
                     <h3 class="spoiler--title">Lösung</h3>

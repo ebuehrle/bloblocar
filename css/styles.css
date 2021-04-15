@@ -9,6 +9,10 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    counter-reset: taskno;
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -64,6 +68,11 @@ h1, h2, footer, .hero .hint {
 h1, h2, footer, a, .task, .spoiler .spoiler--title {
     font-family: 'DotGothic16', monospace;
     color: mediumaquamarine;
+}
+
+.task::after{
+    counter-increment: taskno;
+    content: counter(taskno) ". ";
 }
 
 p {

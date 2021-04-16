@@ -3,7 +3,7 @@ Bloblocar is a little browser-based programming course made for Girls' Day 2021,
 
 ![Screenshot of Bloblocar](screenshot.png)
 
-The site is based on [metacar](github.com/thibo73800/metacar) and [Blockly](https://developers.google.com/blockly). You can try it out [here](https://ebuehrle.github.io/bloblocar).
+The site is based on [metacar](https://github.com/thibo73800/metacar) and [Blockly](https://developers.google.com/blockly). You can try it out [here](https://ebuehrle.github.io/bloblocar).
 
 ## Is that ... German?
 Yes. Unfortunately, I did not have the time to translate the Blockly blocks, yet, but most modern browsers are able to provide a pretty good translation of the tutorials.

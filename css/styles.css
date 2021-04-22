@@ -131,8 +131,7 @@ img, video {
 }
 
 .floating-toolbar {
-    width: fit-content;
-    display: flex;
+    display: inline-flex;
     position: relative;
     z-index: 70; /* Blockly toolbox seems to have z-index 69 */
     bottom: 30px;
